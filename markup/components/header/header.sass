@@ -1,0 +1,58 @@
+
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	padding: 15px 0
+	background-color: $red
+	z-index: 100
+	box-shadow: 0 0 14px rgba(255, 255, 255, .3)
+	.layout
+		display: flex
+		align-items: center
+		justify-content: space-between
+	+ .section,
+	+ .hero
+		margin-top: 72px// header height - 1px
+		+r(400)
+			margin-top: 65px
+
+.logo
+	display: block
+	strong
+		display: block
+		color: #fff
+		font-size: 24px
+		text-transform: uppercase
+		+mbl
+		+r(400)
+			font-size: 20px
+	span
+		display: block
+		color: #fff
+		font-size: 14px
+		+mbl
+		+r(400)
+			font-size: 12px
+
+.socio
+	font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: top
+		margin-left: 16px
+		font-size: 0
+		&:hover
+			svg
+				fill: $white
+		svg
+			display: inline-block
+			vertical-align: top
+			height: 15px
+			fill: $yellow
+			+tr(.4s)
+		.socio__youtube
+			height: 19px
+			+try(-2px)

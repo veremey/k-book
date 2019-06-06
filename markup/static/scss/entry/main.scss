@@ -1,0 +1,26 @@
+/* Mixins, which are specific for current project */
+@import '../mixins.sass';
+/* Mixins and vars for sprite generation */
+@import '../sprites-scss/sprite_96.scss';
+@import '../sprites-scss/svg-sprite.scss';
+/* Vars, which are specific for current project */
+@import '../vars.sass';
+/* Scss for used fonts */
+@import '../fonts.sass';
+
+/* Common styles for current project */
+@import '../common.sass';
+
+
+/* Libraries, which is used in current project. */
+@import 'partials/_libraries.scss';
+
+
+/* Plugins, which is used in current project. */
+@import 'partials/_plugins.scss';
+
+/* Components, which is used in current project. */
+@import 'partials/_components.scss';
+
+/* Additional style files. */
+@import '../etc/etc.scss';

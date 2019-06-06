@@ -1,0 +1,25 @@
+
+.pictu
+	display: inline-block
+	position: relative
+	z-index: 1
+	+r(1024)
+		margin-top: 30px
+	&__el
+		position: absolute
+		width: 100%
+		max-width: 240px
+		height: 24px
+		background: $red
+		transform: translate3d(0, 0, 0,) skew(30deg)
+		&_1
+			top: -12px
+			left: 6px
+		&_2
+			bottom: -12px
+			right: -12px
+			background: $yellow
+			z-index: -1
+	&__picture
+		position: relative
+		z-index: 1

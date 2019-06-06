@@ -1,0 +1,18 @@
+
+/* Mixins, which are specific for current project */
+@import '../../mixins.sass';
+
+/* Mixins and vars for sprite generation */
+@import '../../sprites-scss/sprite_96.scss';
+@import '../../sprites-scss/svg-sprite.scss';
+
+/* Vars, which are specific for current project */
+@import '../../vars.sass';
+/* Scss for used fonts */
+@import '../../fonts.sass';
+@import '../../first.sass';
+
+/* Styles for UI-elements */
+@import '../../GUI.scss';
+
+

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+
+        <div class="page__wrapper">
+            {{>header/header}}
+            {{>hero/hero}}
+            {{>book/book}}
+            {{>about/about}}
+            {{> comein/comein}}
+            {{> maps/maps}}
+            {{> accordion/accordion}}
+
+            {{>footer/footer}}
+        </div>
+
+
+        <script>
+
+            function initMap1() {
+
+                var uluru = {lat: 55.753100, lng: 37.595466,};
+                var center = uluru;
+                var centerMap = (document.body.clientWidth > 800 ) ? center : uluru
+                var map = new google.maps.Map(document.getElementById('map1'), {
+                    zoom: 16,
+                    center: centerMap
+                });
+                if(typeof (markerImage) == 'undefined'){
+                    var image = ('static/img/content/marker.png'  !== undefined ) ? 'static/img/content/marker.png' : '../static/img/content/marker.png';
+                } else {
+                    image = markerImage;
+                }
+
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    // icon: image
+                    });
+            }
+
+            function initMap2() {
+                var uluru = {lat: 55.750964, lng: 37.547576,};
+                var center = uluru;
+                var centerMap = (document.body.clientWidth > 800 ) ? center : uluru
+                var map = new google.maps.Map(document.getElementById('map2'), {
+                    zoom: 16,
+                    center: centerMap
+                });
+                if(typeof (markerImage) == 'undefined'){
+                    var image = ('static/img/content/marker.png'  !== undefined ) ? 'static/img/content/marker.png' : '../static/img/content/marker.png';
+                } else {
+                    image = markerImage;
+                }
+
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    // icon: image
+                    });
+
+            }
+
+            function initMaps(){
+                initMap1();
+                initMap2();
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsp0mPk9YWoktVHmh7ghwETxNxJT6_BZ4&callback=initMaps"
+            async defer></script>
+
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

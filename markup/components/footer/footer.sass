@@ -1,0 +1,128 @@
+
+.footer
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	height: 100px
+	background-color: $dark
+	+r(650)
+		height: auto
+		padding: 20px 0 1px
+	&__list
+		font-size: 0
+		padding: 0
+		margin: 0 0 0 40px
+		list-style: none
+		+r(650)
+			margin: 15px auto
+			order: 5
+		+r(340)
+			margin: 15px 0
+		li
+			display: inline-block
+			vertical-align: top
+			margin-left: 40px
+			+r(700)
+				margin-left: 20px
+				margin-bottom: 16px
+			+r(460)
+				display: block
+				margin-left: 0
+				text-align: center
+			+r(340)
+				text-align: left
+		a
+			font-size: 12px
+			color: #898989
+			+mr
+			+tr(.4s)
+			&:hover
+				color: $red
+	.layout
+		display: flex
+		align-items: center
+		height: 100%
+		+r(650)
+			flex-wrap: wrap
+	.logo
+		+r(650)
+			order: 1
+
+.f-socio
+	display: flex
+	align-items: center
+	margin-left: auto
+	padding: 0
+	font-size: 0
+	+r(650)
+		order: 1
+	+r(340)
+		width: 100%
+		margin: 20px auto 20px -14px
+	li
+		margin-left: 14px
+	a
+		display: inline-block
+		vertical-align: top
+		&:hover
+			svg
+				fill: #e7e7e7
+	svg
+		fill: #888888
+		+tr(.4s)
+
+.f-insta
+	height: 18px
+
+.f-fb
+	height: 18px
+.f-youtube
+	height: 18px
+.f-vk
+	height: 18px
+
+
+.contact
+	display: inline-block
+	vertical-align: top
+	text-align: left
+	width: 100%
+	max-width: 360px
+	margin: 0 auto
+	font-size: 0
+	&__fieldset
+		position: relative
+		border: 0
+		padding: 0
+		margin: 0 0 10px
+		label
+			position: absolute
+			top: 20px
+			left: 20px
+			font-size: 16px
+			user-select: none
+			color: #949494
+			+mr
+			+r(1024)
+				top: 14px
+	input
+		display: block
+		width: 100%
+		padding: 20px 20px
+		background-color: #fff
+		border-radius: 4px
+		border: 1px solid rgb(221, 221, 221)
+		font-size: 16px
+		color: #000
+		+mr
+		+r(1024)
+			padding: 12px 20px
+		&:focus
+			+ label
+				display: none
+	.btn
+		padding: 20px
+		margin-top: 20px
+	.check
+		margin-bottom: 25px

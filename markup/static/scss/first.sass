@@ -1,0 +1,121 @@
+
+*
+	box-sizing: border-box
+	outline: none
+	&:after,
+	&:before
+		box-sizing: inherit
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #000
+
+html, body
+	height: 100%
+	background-color: #fff
+body
+	color: #fff
+	font-size: 16px
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	text-size-adjust: none
+
+a
+	text-decoration: none
+	outline: none
+
+img
+	max-width: 100%
+q
+	&:before,
+	&:after
+		content: none
+
+button
+	background-color: $n
+	border: none
+	outline: none
+	padding: 0
+	cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+p
+	margin: 0
+
+.page
+	&__wrapper
+		position: relative
+		padding-top: 1px
+		min-height: 100vh
+	&__buffer
+		height: 99px// footer height - 1px
+		+r(650)
+			height: 106px
+		+r(460)
+			height: 165px
+		+r(340)
+			height: 219px
+	&.ppp-opened
+		padding-left: 16px
+		overflow: hidden
+
+.layout
+	max-width: 1170px
+	width: 100%
+	padding: 0 15px
+	margin: 0 auto
+
+.section
+	padding: 55px 0 60px
+	background-color: $white
+	overflow: hidden
+	color: #000
+	+mr
+	&-gray
+		background-color: #e7e7e7
+	&.hero
+		padding: 0
+	.title__main
+		text-align: center
+		color: $black
+		margin-bottom: 2.2em
+
+.justified
+	display: flex
+	justify-content: space-between
+	// overflow: hidden
+	+r(1024)
+		flex-wrap: wrap
+
+	&__item
+		position: relative
+		width: 47%
+		display: flex
+		align-items: center
+		justify-content: center
+		+r(1024)
+			width: 100%
+
+.to-center
+	text-align: center

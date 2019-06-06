@@ -1,0 +1,164 @@
+
+.merits
+	padding: 0
+	margin: 0
+	list-style: none
+	+r(1024)
+		margin-bottom: 30px
+	+r(450)
+		margin-bottom: 0
+	li
+		display: flex
+		margin-bottom: 25px
+	b
+		+mb
+	&__pic
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 40px
+		height: 40px
+		min-width: 40px
+		min-height: 40px
+		background-color: $red
+		+rotate(45)
+		svg
+			display: inline-block
+			vertical-align: top
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) rotate(-45deg)
+			max-height: 30px
+			max-width: 30px
+			fill: #fff
+		.m-03
+			transform: translate(-64%, -64%) rotate(-45deg)
+		.m-08
+			transform: translate(-50%, -50%) rotate(-90deg)
+	&__text
+		display: flex
+		align-items: center
+		margin-left: 20px
+
+.check
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		top: 2px
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			~ span
+				user-select: none
+				&:before
+					background-color: #fff
+				&:after
+					content: ""
+					position: absolute
+					top: 4px
+					left: 4px
+					display: inline-block
+					vertical-align: top
+					width: 10px
+					height: 8px
+					background-image: url('../img/content/icon-selector-checked.png')
+					// @include bg(icon-selector-checked)
+					// +s(icon-selector-checked)
+		&:disabled
+			~ span
+				opacity: 1
+	span
+		position: relative
+		padding-left: 28px
+		left: 0
+		top: 0
+		font-size: 14px
+		color: #fff
+		cursor: pointer
+		user-select: none
+		+mr
+		z-index: 15
+		+r(380)
+			display: inline-block
+			max-width: 88vw
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			left: 0
+			width: 18px
+			height: 18px
+			background-color: #fff
+			border-radius: 100%
+			border: 1px solid $yellow
+			cursor: pointer
+			+tr(.4s)
+
+.dots-list
+	margin: 0 0 30px
+	padding: 0
+	list-style: none
+	li
+		position: relative
+		display: block
+		padding-left: 16px
+		font-size: 14px
+		line-height: 1.6
+		color: #0c0c0c
+		+mr
+		&:before
+			content: ''
+			position: absolute
+			top: .6em
+			left: 2px
+			display: inline-block
+			vertical-align: top
+			width: 5px
+			height: 5px
+			background: $red
+			+rotate(45)
+
+.ppp
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+	display: none
+	z-index: -100
+	&.is-active
+		display: flex
+		z-index: 1000
+	&__shadow
+		+coverdiv
+		background-color: rgba(0, 0, 0, .9)
+	&__content
+		position: relative
+		width: 100%
+		max-width: 584px
+		max-height: 80vh
+		background-color: #fff
+		padding: 30px 20px 20px
+		text-align: center
+		border-radius: 10px
+		overflow: hidden
+		display: none
+		&.is-active
+			display: block
+	mark
+		background-color: $n
+		color: $red
+	.btn
+		margin: 0 auto
+	.check
+		position: relative
+		span
+			color: $black
+
+.mod-mb-40
+	margin-bottom: 40px

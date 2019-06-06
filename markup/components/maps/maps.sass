@@ -1,0 +1,57 @@
+
+.centrify
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 50px
+	+r(650)
+		flex-wrap: wrap
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 20px
+		height: 320px
+		width: 50%
+		padding: 10px
+		+r(650)
+			width: 100%
+			margin: 14px 0
+	&__content
+		margin: auto 20px
+		max-width: 240px
+		text-align: center
+		+r(650)
+			margin-bottom: 10px
+
+.map
+	position: relative
+	display: block
+	width: 100%
+	max-width: 670px
+	height: 320px
+	background-color: #ccc
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		width: 50%
+		height: 50%
+		top: -10px
+		left: -10px
+		background-color: $yellow
+		opacity: .99
+		z-index: -1
+	&:after
+		content: ''
+		position: absolute
+		bottom: -10px
+		right: -10px
+		width: 50%
+		height: 50%
+		background-color: $yellow
+		z-index: -1
+	&__content
+		+coverdiv
+		background-color: #f8f9fa
+
