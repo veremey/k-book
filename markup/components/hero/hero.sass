@@ -2,6 +2,8 @@
 	padding: 0
 	position: relative
 	// min-height: 90vh
+	+r(1024)
+		background-color: #07080c
 	&__pic
 		padding: 0
 		margin: 0
@@ -14,6 +16,9 @@
 		left: 50%
 		+r(1200)
 			left: 40%
+		+r(1024)
+			right: -10%
+			left: auto
 		img
 			height: 100%
 			max-width: none
@@ -23,6 +28,8 @@
 		justify-content: center
 		height: 100%
 		width: 100%
+		+r(1024)
+			width: auto
 	&__dates
 		display: block
 		width: 100%
@@ -32,44 +39,74 @@
 	&__location
 		margin-bottom: auto
 		margin-top: 40px
+		+r(800)
+			margin-top: 30px
+			margin-bottom: 40px
+		+r(340)
+			margin-top: 14px
 	&__skew
 		position: relative
 		transform: translate3d(30px, 0, 0) skew(18deg)
 		background-color: #d1d1d1
 		border-left: 2px solid $yellow
 		padding: 10px 0
+		+r(800)
+			transform: translate3d(10px, 0, 0) skew(18deg)
+		+r(340)
+			transform: translate3d(5px, 0, 0) skew(18deg)
 		&:before
 			content: ''
 			+coverdiv
 			width: 140%
 			background-color: #d1d1d1
+			+r(1024)
+				content: none
 	&__unskew
 		transform: translate3d(0, 0, 0) skew(-18deg)
 		margin-left: 10px
+		+r(1024)
+			padding-right: 30px
 	&__btn
 		margin-top: 60px
 		margin-bottom: auto
+		+r(800)
+			margin-top: 120px
+
 	.justified
 		position: relative
 		height: 90vh
 	.justified__item
 		position: relative
 		width: 50%
+		+r(1024)
+			width: 100%
+			justify-content: flex-start
+		&.w-60
+			+r(1024)
+				width: 100%
+	.layout
+		position: relative
+		+r(1024)
+			z-index: 1
+	.title__h
+		color: #fff
 
 	.w-60
 		width: 60%
 
 .scroll-down
 	position: absolute
-	bottom: 0
+	bottom: -1px
 	left: 50%
 	padding: 6px 10px
-	transform: translate3d(-50%, 0%, 0) skew(20deg)
+	transform: translate3d(-50%, 0%, 0) skew(15deg)
 	white-space: nowrap
 	z-index: 5
 	+tr(.4s)
-	&:hover
+	+r(800)
 		background-color: #d1d1d1
+	&:hover
+		background-color: lighten(#d1d1d1, 10%)
 	&:before,
 	&:after
 		content: ''
@@ -85,8 +122,35 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		transform: translate3d(0, 0%, 0) skew(-20deg)
+		transform: translate3d(0, 0%, 0) skew(-15deg)
 		.desc__r
 			margin: 0
 			padding: 0
 			height: 100%
+			// +r(1024)
+			// 	color: #fff
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)
+	.hero__pic
+		right: -44%
+	.hero
+		.layout
+			position: relative
+			z-index: 1
+		.scroll-down
+			background-color: #e7e7e7
+
+@media only screen and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)
+	.hero__pic
+		right: -20%
+		left: auto
+	.hero
+		.layout
+			position: relative
+			z-index: 1
+		.scroll-down
+			background-color: #e7e7e7
+	.hero__skew
+		&:before
+			content: none
