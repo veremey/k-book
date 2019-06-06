@@ -21,6 +21,14 @@ $(document).ready(function () {
 		//close all popups
 		closePpp();
 	});
+
+	$('.contact__input').on('change', function(){
+		if($(this).val().length){
+			$(this).siblings().css({'display' : 'none'})
+		} else {
+			$(this).siblings().css({'display' : ''});
+		}
+	});
 });
 
 

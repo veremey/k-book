@@ -248,6 +248,12 @@
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .icon-loc {
+    fill: #0c0c0c;
+  }
+}
+
 /* Common styles for current project */
 .merits {
   padding: 0;
@@ -699,6 +705,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
   color: #949494;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
