@@ -4,7 +4,7 @@ import mask from 'jquery-mask-plugin';
 $(document).ready(function () {
 
 	$('.js-ppp').click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		//close all popup
 		$('.ppp').removeClass('is-active');
 		$('.ppp__content').removeClass('is-active');

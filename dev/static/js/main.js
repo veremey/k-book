@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 
 	jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-ppp').click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		//close all popup
 		jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ppp').removeClass('is-active');
 		jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ppp__content').removeClass('is-active');
