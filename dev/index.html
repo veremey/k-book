@@ -431,23 +431,24 @@
             	<div class="ppp__content" id="getbook">
             		<button class="btn-close js-close"></button>
             			<h2 class="title__p" role="heading" aria-level="2">Оставляй заявку в форме ниже,<br><mark>и получай первые 5 глав книг</mark></h2>
-            			<form action="/" method="post" class="contact">
-            				<fieldset class="contact__fieldset">
-            					<input class="contact__input" type="text"  id="p-name">
-            					<label for="p-name">Фамилия и имя</label>
-            				</fieldset>
-            				<fieldset class="contact__fieldset">
-            					<input class="contact__input" type="email"  id="p-email">
-            					<label for="p-email">E-mail<sup>*</sup></label>
-            				</fieldset>
-            				<fieldset class="contact__fieldset">
-            					<input class="contact__input" type=""  id="p-email">
-            					<label for="p-email">Телефон с кодом страны</label>
-            				</fieldset>
+            			<form action="https://dimakovpak.com/api.client2crm/" method="post" class="contact">
+            				<div class="contact__fieldset">
+            					<input class="contact__input" type="text" name="firstname" id="p-name" placeholder="Фамилия и имя">
+            					<!-- <label for="p-name">Фамилия и имя</label> -->
+            				</div>
+            				<div class="contact__fieldset">
+            					<input class="contact__input" type="email" placeholder="E-mail" name="email" id="p-email" required="">
+            					<!-- <label for="p-email">E-mail<sup>*</sup></label> -->
+            				</div>
+            				<div class="contact__fieldset">
+            					<input class="contact__input contact__input_phone" type="tel" name="phone"  id="p-tel" required="" placeholder="Телефон с кодом страны">
+            					<!-- <label for="p-tel">Телефон с кодом страны</label> -->
+            				</div>
+            				<input type="text" name="idForm" value="fab6-kniga" style="visibility: hidden; margin: 0; padding: 0">
             
-            				<fieldset class="contact__fieldset to-center">
+            				<div class="contact__fieldset to-center">
             					<button class="btn js-ppp" data-ppp="getbook">Получить доступ</button>
-            				</fieldset>
+            				</div>
             			</form>
             	</div>
             </div>        </div>

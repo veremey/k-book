@@ -1,4 +1,5 @@
 import $ from "jquery";
+import mask from 'jquery-mask-plugin';
 
 $(document).ready(function () {
 
@@ -22,13 +23,15 @@ $(document).ready(function () {
 		closePpp();
 	});
 
-	$('.contact__input').on('change', function(){
-		if($(this).val().length){
-			$(this).siblings().css({'display' : 'none'})
-		} else {
-			$(this).siblings().css({'display' : ''});
-		}
-	});
+	// $('.contact__input').on('change', function(){
+	// 	if($(this).val().length){
+	// 		$(this).siblings().css({'display' : 'none'})
+	// 	} else {
+	// 		$(this).siblings().css({'display' : ''});
+	// 	}
+	// });
+
+	$('.contact__input_phone').mask('+000000000000');
 });
 
 
